@@ -17,7 +17,7 @@
                    let img = new Image();
                    img.onload = function () {
                        resolve(img);
-                   }
+                   };
                    img.src= url;
             }));
    }
@@ -29,7 +29,7 @@
 
        let allPhotoData = [];
        let allTargetData = [];
-       for (let i =0;i < epd.photoUrls.length-99;i++){
+       for (let i =0;i < epd.photoUrls.length;i++){
            let img = await  loadImage(`${BASE_PATH}/${epd.photoUrls[i]}`);
 
            ctx.clearRect(0, 0, 20, 20);
